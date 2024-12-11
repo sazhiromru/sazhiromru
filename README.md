@@ -7,7 +7,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Инженер%20данных-FFD43B?style=for-the-badge&logo=python&logoColor=blue" alt="Бейдж Аналитика данных">
-  <img src="https://img.shields.io/badge/Бизнес%20аналитик-323330?style=for-the-badge&logo=chart-line&logoColor=black" alt="Бейдж Бизнес-аналитика">
+  <img src="https://img.shields.io/badge/Бизнес%20аналитик-323330?style=for-the-badge&logo=soundcharts&logoColor=black" alt="Бейдж Бизнес-аналитика">
 </p>
 
 

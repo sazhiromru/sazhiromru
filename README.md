@@ -14,17 +14,9 @@
 
 
 ## 🔥 Комплексные ETL проекты
-
-| Project Name | Description | Technologies | Link |
-|--------------|-------------|--------------|------|
-| [Production Analysis](https://github.com/sazhirom/ZSNH) | Calendar Balance Management of the Largest Polymer Plant in Russia. | SQL, SAP, Power Query, Excel, Excel VBA | [GitHub](https://github.com/sazhirom/ZSNH) |
-| [Project Beta](https://github.com/yourusername/project-beta) | A web application that helps users manage their tasks efficiently. | JavaScript, React, Node.js | [GitHub](https://github.com/yourusername/project-beta) |
-| [Project Gamma](https://github.com/yourusername/project-gamma) | An innovative mobile app for fitness tracking and health monitoring. | Kotlin, Android, Firebase | [GitHub](https://github.com/yourusername/project-gamma) |
-| [Project Delta](https://github.com/yourusername/project-delta) | A robust backend system for managing e-commerce platforms. | Java, Spring Boot, PostgreSQL | [GitHub](https://github.com/yourusername/project-delta) |
-
 ---
 
-# 🚀 Проект: Автоматизация обработки данных и визуализации
+# 🚀 Скрапинг данных с защищенных сайтов, загрузка информации в PostgreSQL, визуализация Metabase, автоматизация Bash
 
 ## Описание
 Цель проекта — автоматизировать процесс обработки данных от их сбора до визуализации, включающего четыре основных этапа.

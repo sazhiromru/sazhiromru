@@ -116,9 +116,9 @@
 
 
 <div align="center">
-    <img src="https://raw.githubusercontent.com/sazhiromru/images/main/DB1.PNG" alt="Внешний вид дэшборда" width="30%" />
-    <img src="https://raw.githubusercontent.com/sazhiromru/images/main/db2.PNG" alt="Внешний вид дэшборда" width="30%" />
-    <img src="https://raw.githubusercontent.com/sazhiromru/images/main/db3.PNG" alt="Внешний вид дэшборда" width="30%" />
+    <img src="https://raw.githubusercontent.com/sazhiromru/images/main/DB1.PNG" alt="Внешний вид дэшборда" width="100%" />
+    <img src="https://raw.githubusercontent.com/sazhiromru/images/main/db2.PNG" alt="Внешний вид дэшборда" width="100%" />
+    <img src="https://raw.githubusercontent.com/sazhiromru/images/main/db3.PNG" alt="Внешний вид дэшборда" width="100%" />
 </div>
 
 

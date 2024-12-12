@@ -59,7 +59,7 @@
 | [**SQL**](https://github.com/sazhiromru/scraper/blob/main/README.md#SQL)                   | Создание базы данных, подключение через bastion-сервер, сохранение данных с использованием psycopg2, периодическая очистка устаревших записей. | PostgreSQL, AWS, Python, psycopg2 |
 | [**AWS**](https://github.com/sazhiromru/scraper/blob/main/README.md#AWS)                   | Настройка инфраструктуры: создание VPC, EC2, RDS PostgreSQL, S3, CloudWatch, IAM, интеграция компонентов. | VPC, EC2, S3, CloudWatch, IAM  |
 | [**Docker**](https://github.com/sazhiromru/scraper/blob/main/README.md#Docker)                | Создание контейнера для запуска Google Chrome на EC2.                       | Docker                               |
-| [**Bash**](https://github.com/sazhiromru/scraper/blob/main/README.md#6-Bash)                  | Автоматизация процессов на EC2 с помощью Bash-скриптов.                     | Bash                                |
+| [**Bash**](https://github.com/sazhiromru/scraper/blob/main/README.md#6-bash)                  | Автоматизация процессов на EC2 с помощью Bash-скриптов.                     | Bash                                |
 | [**Metabase**](https://github.com/sazhiromru/scraper/blob/main/README.md#Metabase)               | Подключение к базе данных через bastion-сервер, создание интерактивного дашборда. | Metabase                            |
 
 

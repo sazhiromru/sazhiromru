@@ -60,7 +60,7 @@
 | **AWS**                   | Настройка инфраструктуры: создание VPC, EC2, RDS PostgreSQL, S3, CloudWatch, IAM, интеграция компонентов. | VPC, EC2, S3, CloudWatch, IAM   | [Документация AWS](#)      |
 | **Docker**                | Создание контейнера для запуска Google Chrome на EC2.                       | Docker                               | [Код Docker](#)            |
 | **Bash**                  | Автоматизация процессов на EC2 с помощью Bash-скриптов.                     | Bash                                | [Код Bash](#)              |
-| **Metabase**              | Подключение к базе данных через bastion-сервер, создание интерактивного дашборда. | Metabase                            | [Дашборд Metabase]([#](https://github.com/sazhiromru/scraper/blob/main/README.md#Metabase))      |
+| **Metabase**              | Подключение к базе данных через bastion-сервер, создание интерактивного дашборда. | Metabase                            | [Дашборд Metabase] (https://github.com/sazhiromru/scraper/blob/main/README.md#Metabase)     |
 
 
 

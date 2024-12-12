@@ -64,6 +64,17 @@
 [Дашборд Metabase](http://47.129.223.184:3000/public/dashboard/1a51169a-8c3c-4d9e-8ee7-a508fb3f7539?date=2024-12-10)
 
 ---
+| **Функция**         | **Описание**                                                                 | **Технологии**                             
+|---------------------------|------------------------------------------------------------------------------|--------------------------------------|
+| [**Сбор данных**](https://github.com/sazhiromru/scraper/blob/main/README.md#scraping-section)           | Сбор данных с трех веб-сайтов и сохранение в формате CSV.                   | Python, Selenium, Beautiful Soup, Pandas, re |
+| [**Обработка данных**](https://github.com/sazhiromru/scraper/blob/main/README.md#wrangling-section)      | Очистка, анализ данных, нахождение выгодных сделок, сбор истории продаж для 150 URL, формирование итогового списка рекомендаций. | Pandas, NumPy, Selenium, Beautiful Soup, re |   
+| [**SQL**](https://github.com/sazhiromru/scraper/blob/main/README.md#SQL-section)                   | Создание базы данных, подключение через bastion-сервер, сохранение данных с использованием psycopg2, периодическая очистка устаревших записей. | PostgreSQL, AWS, Python, psycopg2 |
+| [**AWS**](https://github.com/sazhiromru/scraper/blob/main/README.md#AWS-section)                   | Настройка инфраструктуры: создание VPC, EC2, RDS PostgreSQL, S3, CloudWatch, IAM, интеграция компонентов. | VPC, EC2, S3, CloudWatch, IAM  |
+| [**Docker**](https://github.com/sazhiromru/scraper/blob/main/README.md#Docker-section)                | Создание контейнера для запуска Google Chrome на EC2.                       | Docker                               |
+| [**Bash**](https://github.com/sazhiromru/scraper/blob/main/README.md#bash-section)                  | Автоматизация процессов на EC2 с помощью Bash-скриптов.                     | Bash                                |
+| [**Metabase**](https://github.com/sazhiromru/scraper/blob/main/README.md#Metabase-section)               | Подключение к базе данных через bastion-сервер, создание интерактивного дашборда. | Metabase                            |
+
+---
 <br>
 
 ## 📈 Небольшие проекты

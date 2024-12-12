@@ -120,12 +120,13 @@
 ## 🛠️ Навыки
 
 ### 👨‍💻 Программирование и скрипты
-- **Python (Pandas, NumPy, Matplotlib, Seaborn, Selenium, BeautifulSoup, re )**
+- **Python (Pandas, NumPy, Matplotlib, SKlearn, Seaborn, Selenium, BeautifulSoup, re )**
 - **SQL**
 
 ### 📊 Инструменты визуализации данных
 - **Power BI**
 - **Metabase**
+- - **Grafana**
 
 ### 🗄️ Базы данных
 - **PostgreSQL**
@@ -134,7 +135,8 @@
 
 ### ☁️ Облако и другие технологии
 - **AWS Cloud Practitioner**
-- **Jupyter Notebooks**
+- **Docker**
+- **Airflow**
 
 ---
 <br>

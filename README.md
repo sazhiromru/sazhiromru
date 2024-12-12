@@ -63,7 +63,6 @@
 | [**Metabase**](https://github.com/sazhiromru/scraper/blob/main/README.md#Metabase-section)               | Подключение к базе данных через bastion-сервер, создание интерактивного дашборда. | Metabase                            |
 
 
-(https://github.com/sazhiromru/scraper/blob/main/README.md#Metabase)
 
 
 

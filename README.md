@@ -129,7 +129,233 @@
 
 **Данные**: Анонимные опросные данные с демографической, психологической и поведенческой информацией, позволяющие понять связь между различными факторами и склонностью к проблемному интернет-поведению.  
 
-**Супер простое описание**Есть данные по 4 тысячам детей по их успеваемости, оценкам по физкультуре, весу/росту, успехах в различных спортивных метриках, BMI и так далее. Для примерно девятиста детей есть так же данные акселерометра, что совсем бесполезно на мой взгляд (данные есть по 29% детей, для тестового датасета вообще 2 из 30 - 6%). По этим характеристикам надо предсказать уровень SII - оценка того, насколько ребенок зависим от интернета и насколько он негативно влияет на его жизнь. 
+**Супер простое описание**:  
+Есть данные по 4 тысячам детей по их успеваемости, оценкам по физкультуре, весу/росту, успехах в различных спортивных метриках, BMI и так далее. Для примерно девятиста детей есть так же данные акселерометра, что совсем бесполезно на мой взгляд (данные есть по 29% детей, для тестового датасета вообще 2 из 30 - 6%). По этим характеристикам надо предсказать уровень SII - оценка того, насколько ребенок зависим от интернета и насколько он негативно влияет на его жизнь.  
+
+**Идея**  
+Аналитики пытаются предсказать sii - целевую категорийную величина. Я попытаюсь предсказать PCIAT-TOTAL - результат прохождения опросника, на основании которого присуждается sii. Он не дискретен, работает по следующей формуле:
+1. От 0 до 20 быллов - 0 категория зависимости
+2. От 21 до 40 - 1 категория зависимости и.т.д
+   Т.к эта величина не дискретная, в отличие от sii, прогноз теоретически должен быть точнее
+
+**Результат**  
+Data scientist в ближайшее время из меня не выйдет. Результат - 0.38, при диапазоне в первой тысяче до 0.4 до 0.5.
+Ссылка на блокнот Kaggle: https://www.kaggle.com/code/georgiiromanov/child-mind-final
+<details>
+    <summary>Код</summary>
+```python
+  import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.preprocessing import LabelEncoder
+import numpy as np 
+import pandas as pd 
+import os
+from sklearn.impute import KNNImputer 
+
+count = 0
+for dirname, _, filenames in os.walk('/kaggle/input'):
+    for filename in filenames:
+        print(os.path.join(dirname, filename))
+        count +=1
+        if count >= 15:
+            break
+    if count >= 15:
+        break
+        
+data_train = pd.read_csv(r'/kaggle/input/child-mind-institute-problematic-internet-use/train.csv')
+data_test = pd.read_csv('/kaggle/input/child-mind-institute-problematic-internet-use/test.csv')
+data_train.head()
+
+# убираем нулевые значения искомой метрики, строим график распределения по значениям
+
+
+filtered_data = data_train[data_train['sii'].notna()].reset_index()
+
+sns.countplot(data = filtered_data, x = 'sii')
+
+plt.title('Распределение Sii')
+plt.xlabel('Значение Sii')
+plt.ylabel('Количество')
+plt.show()
+
+# распределение по полу и возрасту
+sns.countplot(data = filtered_data, x = 'Basic_Demos-Age', hue = 'Basic_Demos-Sex' )
+
+plt.title('Age/Sex распределение')
+plt.xlabel('количетсво')
+plt.legend(['мужской','женский'], title = 'Пол')
+plt.show()
+
+# еще распределие, со стакнутыми колонками
+pivot_table = filtered_data.pivot_table(index = 'Basic_Demos-Age', columns = 'Basic_Demos-Sex', aggfunc = 'size',fill_value = 0)
+pivot_table.head()
+
+pivot_table.plot(kind = 'bar', stacked = True)
+plt.title('Еще распредение для наглядности')
+plt.legend(['мужской', 'женский'], title ='пол')
+plt.tight_layout()
+plt.show()
+
+#Убираем колонки, которых нет в тестовом дата сете, кроме целевой
+columns_to_drop = [col for col in data_train.columns if col not in data_test.columns]
+print(columns_to_drop)
+columns_to_drop.remove('PCIAT-PCIAT_Total')
+filtered_data.drop(columns = columns_to_drop, inplace = True)
+
+# строим график, где смотрим распределение по нулевым значениям оставшихся колонок. здесь в итоге выбираем целевые 35%
+graph = filtered_data.isnull().sum().apply(lambda x: x/len(filtered_data['PCIAT-PCIAT_Total'])*100).sort_values(ascending = False)
+graph.plot(kind = 'barh', figsize = (20,30))
+plt.gca().yaxis.set_tick_params(labelsize=18, pad=5)
+plt.tight_layout()
+plt.gca().grid()
+ticks = [x*5 for x in range(1,21)]
+plt.gca().xaxis.set_ticks(ticks)
+
+# удаляем столбцы с более 35% NaN
+indexes_to_delete = graph.index[graph > 35].tolist()
+filtered_data.drop(columns = indexes_to_delete, inplace = True)
+
+# так же убираем ID т к решили не использовать данные акселерометра
+columns_to_drop_2 = ['index','id']
+filtered_data.drop(columns = columns_to_drop_2, inplace = True)
+
+# преобразуем категорийные столбцы в числовые. В основном это времена года когда проводились тесты
+column_to_label = filtered_data.select_dtypes(include = 'object').columns
+
+labeled_data = filtered_data.copy()
+label_coder = LabelEncoder()
+for col in column_to_label:
+    labeled_data[f'{col}'] = label_coder.fit_transform(labeled_data[f'{col}'])
+
+# строим матрицу в sns, анализируем на глаз, выбираем число 70%, убираем колонки с большей кореляцией(в основном это различные показатели массы и состава тела)
+matrix = labeled_data.corr()
+plt.figure(figsize=(40, 40))
+sns.heatmap(matrix, annot=True, cmap='coolwarm', linewidths=0.5, fmt='.2f', vmin=-1, vmax=1)
+
+limit = 0.7
+
+drop_columns_3 = set()
+for i in range(len(matrix.columns)):
+    for j in range(i):
+        if abs(matrix.iloc[i, j]) > limit:
+            col = matrix.columns[i]
+            drop_columns_3.add(col)
+
+drop_columns_3.discard('PCIAT-PCIAT_Total')
+
+cleaned_data = labeled_data.drop(columns=drop_columns_3)
+
+
+
+imputers = {}
+imputed_dataset = {}
+
+imputers = KNNImputer(n_neighbors=17)
+    
+imputed_dataset = pd.DataFrame(
+    imputers.fit_transform(cleaned_data), 
+    columns=cleaned_data.columns)
+
+#Создаем модель, подбираем значения
+    
+from sklearn.model_selection import train_test_split, RandomizedSearchCV
+from sklearn.metrics import mean_squared_error
+import lightgbm as lgb
+import pandas as pd
+import numpy as np
+
+SEED = 42
+
+# Ensure imputed_dataset is defined
+# imputed_dataset = ...
+
+X = imputed_dataset.drop(columns=['PCIAT-PCIAT_Total'])  # your target column name
+y = imputed_dataset['PCIAT-PCIAT_Total']
+
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=SEED)
+'''
+# Parameter grid (potentially smaller)
+param_grid = {
+    'learning_rate': [0.01, 0.03, 0.05, 0.1],
+    'max_depth': [6, 8, 10, 12, 14],
+    'num_leaves': [500],
+    'min_data_in_leaf': [5, 10, 20, 50],
+    'feature_fraction': [0.6, 0.8, 1.0],
+    'bagging_fraction': [0.6, 0.8, 0.9],
+    'bagging_freq': [1, 3, 5],
+    'lambda_l1': [4.735462555910575],
+    'lambda_l2': [4.735028557007343e-06],
+}
+
+model = lgb.LGBMRegressor(random_state=42, verbose=-1)
+
+search = RandomizedSearchCV(
+    estimator=model,
+    param_distributions=param_grid,
+    n_iter=3000,
+    scoring='neg_mean_squared_error',
+    cv=5,
+    random_state=42,
+    verbose=1
+)
+
+search.fit(X_train, y_train)
+print("Best Parameters:", search.best_params_)
+print(f"Best RMSE: {(-search.best_score_)**0.5:.4f}")
+# Parameter grid (potentially smaller)
+param_grid = {
+    'learning_rate': [0.05],  
+    'max_depth': [4, 6],
+    'num_leaves': [200, 300, 400, 500],
+    'min_data_in_leaf': [10],  
+    'feature_fraction': [0.4, 0.5, 0.6],
+    'bagging_fraction': [0.9],
+    'bagging_freq': [3],  
+    'lambda_l1': [1, 2, 3, 4, 4.735462555910575],
+    'lambda_l2': [3e-05, 3e-04, 4.735028557007343e-06],
+}
+
+
+model = lgb.LGBMRegressor(random_state=42, verbose=-1)
+
+search = RandomizedSearchCV(
+    estimator=model,
+    param_distributions=param_grid,
+    n_iter=10,
+    scoring='neg_mean_squared_error',
+    cv=5,
+    random_state=42,
+    verbose=1
+)
+
+search.fit(X_train, y_train)
+print("Best Parameters:", search.best_params_)
+print(f"Best RMSE: {(-search.best_score_)**0.5:.4f}")
+best_model = search.best_estimator_
+columns_final = list(imputed_dataset.columns)
+columns_final.remove('PCIAT-PCIAT_Total')
+X_test = data_test[columns_final]
+
+# Select columns with object (categorical) data type
+column_to_label_2 = X_test.select_dtypes(include='object').columns
+
+# Transform categorical columns using label_coder
+for col in column_to_label_2:
+    X_test.loc[:, col] = label_coder.fit_transform(X_test[col])
+
+X_final_test = pd.DataFrame(
+    imputers.fit_transform(X_test), 
+    columns=X_test.columns)
+
+y_pred = best_model.predict(X_final_test)
+X_final_test['PCIAT_TOTAL'] = y_pred
+X_final_test['sii'] = np.where(X_final_test['PCIAT_TOTAL']<21,0,
+                              np.where(X_final_test['PCIAT_TOTAL']<31,1,2))
+X_final_test['id'] = data_test['id']
+X_final_test[['id','sii']].to_csv('submission.csv', index=False,na_rep='null')
+'''
+</details>
 
 
 

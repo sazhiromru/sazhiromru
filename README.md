@@ -144,7 +144,8 @@
 Data scientist в ближайшее время из меня не выйдет. Результат - 0.38, при диапазоне в первой тысяче до 0.4 до 0.5.
 Ссылка на блокнот Kaggle: https://www.kaggle.com/code/georgiiromanov/child-mind-final
 <details>
-    <summary>
+  <summary><strong>📜 Код Kaggle</strong></summary>
+
 ```python
   
 import matplotlib.pyplot as plt
@@ -357,10 +358,9 @@ X_final_test['sii'] = np.where(X_final_test['PCIAT_TOTAL']<21,0,
                               np.where(X_final_test['PCIAT_TOTAL']<31,1,2))
 X_final_test['id'] = data_test['id']
 X_final_test[['id','sii']].to_csv('submission.csv', index=False,na_rep='null')
+
 '''
 </details>
-
-
 
 
 

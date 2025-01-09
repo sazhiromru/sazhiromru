@@ -359,14 +359,10 @@ X_final_test['sii'] = np.where(X_final_test['PCIAT_TOTAL']<21,0,
 X_final_test['id'] = data_test['id']
 X_final_test[['id','sii']].to_csv('submission.csv', index=False,na_rep='null')
 
-'''
+```
+
 </details>
-
-
-
-
----
-<br>
+<br></br>
 
 <a id="about-section"></a>
 ## 💼 Опыт работы и достижения

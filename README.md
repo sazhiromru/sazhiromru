@@ -396,7 +396,7 @@ X_final_test[['id','sii']].to_csv('submission.csv', index=False,na_rep='null')
 ### 📊 Инструменты визуализации данных
 - **Power BI**
 - **Metabase**
-- - **Grafana**
+- **Grafana**
 
 ### 🗄️ Базы данных
 - **PostgreSQL**
@@ -407,6 +407,8 @@ X_final_test[['id','sii']].to_csv('submission.csv', index=False,na_rep='null')
 - **AWS Cloud Practitioner**
 - **Docker**
 - **Airflow**
+- **Kafka**
+- **Redis**
 
 ---
 <br>

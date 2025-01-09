@@ -144,9 +144,10 @@
 Data scientist в ближайшее время из меня не выйдет. Результат - 0.38, при диапазоне в первой тысяче до 0.4 до 0.5.
 Ссылка на блокнот Kaggle: https://www.kaggle.com/code/georgiiromanov/child-mind-final
 <details>
-    <summary>Код</summary>
+    <summary>
 ```python
-  import matplotlib.pyplot as plt
+  
+import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import LabelEncoder
 import numpy as np 

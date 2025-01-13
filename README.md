@@ -15,7 +15,7 @@
 ## 📋 Содержание
 
 - [🔥 Комплексные ETL проекты](#etl)
-  - [🎮 Steam Scraper (*Python: BeautifulSoup, Selenium → Pandas, NumPy → AWS → PostgreSQL → Metabase)*](#steam-scraper)
+  - [🎮 Steam Scraper (*Python: BeautifulSoup, Selenium, Pandas, NumPy → AWS → PostgreSQL → Metabase)*](#steam-scraper)
 - [📈 Небольшие проекты](#small)
   - [📊 Дэшборд - ключевые показатели эффективности производства нефтехимического холдинга (*SQL - PowerBI*)](#dashboard-production)
   - [🏆 Kaggle competition - Child Mind - (*Python:Pandas, SNS, matplotlib, LGBM*)](#kaggle)

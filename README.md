@@ -16,7 +16,7 @@
 
 - [🔥 Комплексные ETL проекты](#etl)
   - [💰 Betting analyzer (*Python: BS4, Selenium, Pandas, NumPy → GoogleCloud  → Airflow, Redis → Kafka → ClickHouse → Grafana)*](#betting)
-  - [🎮 Steam Scraper (*Python: BeautifulSoup, Selenium, Pandas, NumPy → AWS → PostgreSQL → Metabase)*](#steam-scraper)
+  - [🎮 Steam Scraper  (*Python: BS4, Selenium, Pandas, NumPy → AWS → PostgreSQL → Metabase)*](#steam-scraper)
 - [📈 Небольшие проекты](#small)
   - [📊 Дэшборд - ключевые показатели эффективности производства нефтехимического холдинга (*SQL - PowerBI*)](#dashboard-production)
   - [🏆 Kaggle competition - Child Mind - (*Python:Pandas, SNS, matplotlib, LGBM*)](#kaggle)

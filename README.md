@@ -26,6 +26,7 @@
 - [📬 Контакты](#contacts-section)
 
 ---
+---
 <br>
 
 <a id="ETL"></a>
@@ -72,8 +73,9 @@
 Доступен с 08:00 до 20:00 CET:  
 [Дашборд Grafana] **31.01 на доработке, перевыложу 03.02**
 
-  
+---  
 ---
+<br>
 <br>
 <a id="steam-scraper"></a>
 
@@ -125,7 +127,9 @@
 | [**Bash**](https://github.com/sazhiromru/scraper/blob/main/README.md#bash-section)                  | Автоматизация процессов на EC2 с помощью Bash-скриптов.                     | Bash                                |
 | [**Metabase**](https://github.com/sazhiromru/scraper/blob/main/README.md#Metabase-section)               | Подключение к базе данных через bastion-сервер, создание интерактивного дашборда. | Metabase                            |
 
+---  
 ---
+<br>
 <br>
 
 <a id="small"></a>
@@ -164,7 +168,7 @@
 3. **Выявлять отклонения от изначального плана** и анализировать их причины.
 
 <details>
-  <summary><strong>📜 Код Kaggle</strong></summary>
+  <summary><strong>📜 Дэшборд</strong></summary>
 
 <div align="center">
     <img src="https://raw.githubusercontent.com/sazhiromru/images/main/DB1.PNG" alt="Внешний вид дэшборда" width="100%" />
@@ -172,6 +176,11 @@
     <img src="https://raw.githubusercontent.com/sazhiromru/images/main/db3.PNG" alt="Внешний вид дэшборда" width="100%" />
 </div>  
 </details>
+
+---  
+---
+<br>
+<br>
 
 <a id="kaggle"></a>
 ### 🏆 Kaggle competition - Child Mind - Pandas, SNS, matplotlib, LGBM 
@@ -411,7 +420,11 @@ X_final_test[['id','sii']].to_csv('submission.csv', index=False,na_rep='null')
 ```
 
 </details>
-<br></br>
+
+---  
+---
+<br>
+<br>
 
 <a id="about-section"></a>
 ## 💼 Опыт работы и достижения
@@ -432,7 +445,9 @@ X_final_test[['id','sii']].to_csv('submission.csv', index=False,na_rep='null')
 - ☁️ **AWS Certified Cloud Practitioner**
 
 
+---  
 ---
+<br>
 <br>
 
 <a id="skills-section"></a>
@@ -459,7 +474,9 @@ X_final_test[['id','sii']].to_csv('submission.csv', index=False,na_rep='null')
 - **Kafka**
 - **Redis**
 
+---  
 ---
+<br>
 <br>
 
 <a id="experience-section"></a>
@@ -486,7 +503,10 @@ X_final_test[['id','sii']].to_csv('submission.csv', index=False,na_rep='null')
 - Внёс вклад в проектирование архитектуры баз данных и систем управления спросом и операциями.  
 
  
-  <br>
+---  
+---
+<br>
+<br>
 
 <a id="contacts-section"></a>
   ## 📬 Контакты

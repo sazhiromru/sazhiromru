@@ -66,7 +66,15 @@
 - **Язык**: Python  
 - **База данных**: ClickHouse
 - **Инфраструктура**: GoogleCloud, автоматизация Airflow, брокеры сообщений - Redis, Kafka
-- **Визуализация**: Grafana 
+- **Визуализация**: Grafana
+- 
+| **Функция**         | **Описание**                                                                 | **Технологии**                             
+|---------------------------|------------------------------------------------------------------------------|--------------------------------------|
+| [**Сбор данных**](https://github.com/sazhiromru/scraper/blob/main/README.md#ibet-scraping-section)           | Сбор данных с трех веб-сайтов и передача в redis. Сбор результатов матчей                   | Python, Selenium, Beautiful Soup, Pandas, re |
+| [**Обработка данных**](https://github.com/sazhiromru/scraper/blob/main/README.md#ibet-wrangling-section)      | Сбор и агрегация данных с redis. Нахождение одинаковых событий через транслитерацию и пользовательские функции. Загрузка данных в Clickhouse | Pandas, NumPy, Selenium, Beautiful Soup, re |   
+| [**Redis**](https://github.com/sazhiromru/scraper/blob/main/README.md#Redis)                   | Настройка Redis для передачи данных | Redis |
+| [**Clickhouse**](https://github.com/sazhiromru/scraper/blob/main/README.md#Clickhouse)                   | Запуск и настройка Clickhouse на сервере с 2 GB RAM | Clickhouse, SQL  |
+| [**Kafka**](https://github.com/sazhiromru/scraper/blob/main/README.md#Docker-section)                | Настройка Kafka для передачи данных в Clickhouse                       | Kafka                                                      |
 
 
 #### 📊 Ссылка на дашборд

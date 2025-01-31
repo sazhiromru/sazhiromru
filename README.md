@@ -70,7 +70,7 @@
 
 #### 📊 Ссылка на дашборд
 Доступен с 08:00 до 20:00 CET:  
-[Дашборд Grafana] **27.01 на доработке, перевыложу 28.01**
+[Дашборд Grafana] **31.01 на доработке, перевыложу 03.02**
 
   
 ---
@@ -163,12 +163,15 @@
 2. **Оперативно анализировать обновленные прогнозы** ключевых марок продукции на конец месяца.
 3. **Выявлять отклонения от изначального плана** и анализировать их причины.
 
+<details>
+  <summary><strong>📜 Код Kaggle</strong></summary>
 
 <div align="center">
     <img src="https://raw.githubusercontent.com/sazhiromru/images/main/DB1.PNG" alt="Внешний вид дэшборда" width="100%" />
     <img src="https://raw.githubusercontent.com/sazhiromru/images/main/db2.PNG" alt="Внешний вид дэшборда" width="100%" />
     <img src="https://raw.githubusercontent.com/sazhiromru/images/main/db3.PNG" alt="Внешний вид дэшборда" width="100%" />
 </div>  
+</details>
 
 <a id="kaggle"></a>
 ### 🏆 Kaggle competition - Child Mind - Pandas, SNS, matplotlib, LGBM 

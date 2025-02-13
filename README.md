@@ -77,13 +77,16 @@
 | **Функция**         | **Описание**                                                                 | **Технологии**                             
 |---------------------------|------------------------------------------------------------------------------|--------------------------------------|
 | [**Сбор данных**](https://github.com/sazhiromru/ibet#ibet-scraping-section)           | Сбор данных с трех веб-сайтов и передача в redis. Сбор результатов матчей                   | Python, Selenium, Beautiful Soup, Pandas, re |
-| [**Обработка данных**](https://github.com/sazhiromru/ibet#ibet-wrangling-section)      | Сбор и агрегация данных с redis. Нахождение одинаковых событий через транслитерацию и пользовательские функции. Загрузка данных в Clickhouse | Pandas, NumPy, Selenium, Beautiful Soup, re |   
+| [**Обработка данных**](https://github.com/sazhiromru/ibet#ibet-wrangling-section)      | Сбор и агрегация данных с redis. Нахождение одинаковых событий через транслитерацию и пользовательские функции.  | Pandas, NumPy, Selenium, Beautiful Soup, re |   
 | [**VNC server**](https://github.com/sazhiromru/scraper/blob/main/README.md#Redis)                   | Настройка VNC для логигна/обхода капчи | VNC |
 | [**Redis**](https://github.com/sazhiromru/scraper/blob/main/README.md#Redis)                   | Настройка Redis для передачи данных | Redis |
 | [**Kafka**](https://github.com/sazhiromru/scraper/blob/main/README.md#Kafka)                | Настройка Kafka через KRAFT для передачи данных в Clickhouse                       | Kafka        |
 | [**Clickhouse**](https://github.com/sazhiromru/scraper/blob/main/README.md#Clickhouse)                   | Запуск и настройка Clickhouse на сервере с 2 GB RAM | Clickhouse, SQL  |
 | [**Grafana**]()                | Создание ДБ с динамическими элементами                    | Grafana        |
 
+#### 📊 Ссылка на дашборд
+Обновляется в live с 06:00 до 16:00 CET:  
+[Дашборд Grafana](http://35.221.182.237:3000/public-dashboards/d10f4d4c98d44da3900a12b173f9a3bb)  
 
 ---  
 ---

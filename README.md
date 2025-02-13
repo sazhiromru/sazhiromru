@@ -89,7 +89,7 @@
 <br>
 <a id="steam-scraper"></a>
 
-### 🎮 Steam Scraper - результат здесь: [дэшборд Metabase](http://47.129.223.184:3000/public/dashboard/1a51169a-8c3c-4d9e-8ee7-a508fb3f7539?date=2024-12-10)
+### 🎮 Steam Scraper - результат здесь: [дэшборд Metabase](http://47.129.223.184:3000/public/dashboard/1a51169a-8c3c-4d9e-8ee7-a508fb3f7539)
 
 ---
 ![Диаграмма проекта](https://raw.githubusercontent.com/sazhiromru/images/969a0f40bed959fac421447a24223250edea6b76/steam-diagram.svg)
@@ -122,7 +122,7 @@
 
 #### 📊 Ссылка на дашборд
 Доступен с 08:00 до 20:00 CET:  
-[Дашборд Metabase](http://47.129.223.184:3000/public/dashboard/1a51169a-8c3c-4d9e-8ee7-a508fb3f7539?date=2024-12-10)  
+[Дашборд Metabase](http://47.129.223.184:3000/public/dashboard/1a51169a-8c3c-4d9e-8ee7-a508fb3f7539)  
 
   
 

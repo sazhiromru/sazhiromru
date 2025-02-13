@@ -69,7 +69,7 @@
 
 #### 🛠️ Технологии
 - **Язык**: Python  
-- **База данных**: ClickHouse
+- **База данных**: ClickHouse, Postgres - для работы с Airflow
 - **Инфраструктура**: GoogleCloud, автоматизация Airflow, брокеры сообщений - Redis, Kafka, для обхода капчи - VNC server на трех скраперах
 - **Визуализация**: Grafana
 <br>
@@ -82,6 +82,9 @@
 | [**Redis**](https://github.com/sazhiromru/scraper/blob/main/README.md#Redis)                   | Настройка Redis для передачи данных | Redis |
 | [**Kafka**](https://github.com/sazhiromru/scraper/blob/main/README.md#Kafka)                | Настройка Kafka через KRAFT для передачи данных в Clickhouse                       | Kafka        |
 | [**Clickhouse**](https://github.com/sazhiromru/scraper/blob/main/README.md#Clickhouse)                   | Запуск и настройка Clickhouse на сервере с 2 GB RAM | Clickhouse, SQL  |
+| [**Postgres**](https://github.com/sazhiromru/scraper/blob/main/README.md#Clickhouse)                   | Для записи данных и стабильной работы Airflow | Postgres  |
+| [**Airflow**](https://github.com/sazhiromru/scraper/blob/main/README.md#Clickhouse)                   | Автоматизация всех процессов, 8 DAG. | Airflow  |
+| [**GCP и BASH**](https://github.com/sazhiromru/scraper/blob/main/README.md#Clickhouse)                   | Все сделано без контейнеров. Создание ключей, предоставление доступа, создание служб, логов, разрешения для программ в BASHRC и т д | BASH  |
 | [**Grafana**]()                | Создание ДБ с динамическими элементами                    | Grafana        |
 
 #### 📊 Ссылка на дашборд

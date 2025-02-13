@@ -79,7 +79,6 @@
 | [**Обработка данных**](https://github.com/sazhiromru/ibet#ibet-wrangling-section)      | Сбор и агрегация данных с redis. Нахождение одинаковых событий через транслитерацию и пользовательские функции. Загрузка данных в Clickhouse | Pandas, NumPy, Selenium, Beautiful Soup, re |   
 | [**VNC server**](https://github.com/sazhiromru/scraper/blob/main/README.md#Redis)                   | Настройка VNC для логигна/обхода капчи | VNC |
 | [**Redis**](https://github.com/sazhiromru/scraper/blob/main/README.md#Redis)                   | Настройка Redis для передачи данных | Redis |
-
 | [**Kafka**](https://github.com/sazhiromru/scraper/blob/main/README.md#Kafka)                | Настройка Kafka для передачи данных в Clickhouse                       | Kafka        |
 | [**Clickhouse**](https://github.com/sazhiromru/scraper/blob/main/README.md#Clickhouse)                   | Запуск и настройка Clickhouse на сервере с 2 GB RAM | Clickhouse, SQL  |
 | [**Grafana**]()                | На корректировке, скоро перевыложу                      | Grafana        |

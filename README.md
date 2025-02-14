@@ -81,7 +81,7 @@
 | [**VNC server**](https://github.com/sazhiromru/scraper/blob/main/README.md#Redis)                   | Настройка VNC для логигна/обхода капчи | VNC |
 | [**Redis**](https://github.com/sazhiromru/scraper/blob/main/README.md#Redis)                   | Настройка Redis для передачи данных | Redis |
 | [**Kafka**](https://github.com/sazhiromru/scraper/blob/main/README.md#Kafka)                | Настройка Kafka через KRAFT для передачи данных в Clickhouse                       | Kafka        |
-| [**Clickhouse**](https://github.com/sazhiromru/scraper/blob/main/README.md#Clickhouse)                   | Запуск и настройка Clickhouse на сервере с 2 GB RAM | Clickhouse, SQL  |
+| [**Clickhouse**](https://github.com/sazhiromru/scraper/blob/main/README.md#Clickhouse)                   | Запуск и настройка Clickhouse на сервере с 4 GB RAM | Clickhouse, SQL  |
 | [**Postgres**](https://github.com/sazhiromru/scraper/blob/main/README.md#Clickhouse)                   | Для записи данных и стабильной работы Airflow | Postgres  |
 | [**Airflow**](https://github.com/sazhiromru/scraper/blob/main/README.md#Clickhouse)                   | Автоматизация всех процессов, 8 DAG. | Airflow  |
 | [**GCP и BASH**](https://github.com/sazhiromru/scraper/blob/main/README.md#Clickhouse)                   | Все сделано без контейнеров. Создание ключей, предоставление доступа, создание служб, логов, разрешения для программ, настройка среды, переменных и т д | BASH  |

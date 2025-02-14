@@ -76,16 +76,16 @@
   
 | **Функция**         | **Описание**                                                                 | **Технологии**                             
 |---------------------------|------------------------------------------------------------------------------|--------------------------------------|
-| [**Сбор данных**](https://github.com/sazhiromru/ibet#ibet-scraping-section)           | Сбор данных с трех веб-сайтов и передача в redis. Сбор результатов матчей                   | Python, Selenium, Beautiful Soup, Pandas, re |
-| [**Обработка данных**](https://github.com/sazhiromru/ibet#ibet-wrangling-section)      | Сбор и агрегация данных с redis. Нахождение одинаковых событий через транслитерацию и пользовательские функции.  | Pandas, NumPy, Selenium, Beautiful Soup, re |   
-| [**VNC server**](https://github.com/sazhiromru/scraper/blob/main/README.md#Redis)                   | Настройка VNC для логигна/обхода капчи | VNC |
-| [**Redis**](https://github.com/sazhiromru/scraper/blob/main/README.md#Redis)                   | Настройка Redis для передачи данных | Redis |
-| [**Kafka**](https://github.com/sazhiromru/scraper/blob/main/README.md#Kafka)                | Настройка Kafka через KRAFT для передачи данных в Clickhouse                       | Kafka        |
-| [**Clickhouse**](https://github.com/sazhiromru/scraper/blob/main/README.md#Clickhouse)                   | Запуск и настройка Clickhouse на сервере с 4 GB RAM | Clickhouse, SQL  |
-| [**Postgres**](https://github.com/sazhiromru/scraper/blob/main/README.md#Clickhouse)                   | Для записи данных и стабильной работы Airflow | Postgres  |
-| [**Airflow**](https://github.com/sazhiromru/scraper/blob/main/README.md#Clickhouse)                   | Автоматизация всех процессов, 8 DAG. | Airflow  |
-| [**GCP и BASH**](https://github.com/sazhiromru/scraper/blob/main/README.md#Clickhouse)                   | Все сделано без контейнеров. Создание ключей, предоставление доступа, создание служб, логов, разрешения для программ, настройка среды, переменных и т д | BASH  |
-| [**Grafana**]()                | Создание ДБ с динамическими элементами                    | Grafana, SQL        |
+| [**Сбор данных**](https://github.com/sazhiromru/ibet#ibet-scrape)           | Сбор данных с трех веб-сайтов и передача в redis. Сбор результатов матчей                   | Python, Selenium, Beautiful Soup, Pandas, re |
+| [**Обработка данных**](https://github.com/sazhiromru/ibet#ibet-merge)      | Сбор и агрегация данных с redis. Нахождение одинаковых событий через транслитерацию и пользовательские функции.  | Pandas, NumPy, Selenium, Beautiful Soup, re |   
+| [**VNC server**](https://github.com/sazhiromru/ibet#ibet-VNC)                   | Настройка VNC для логигна/обхода капчи | VNC |
+| [**Redis**](https://github.com/sazhiromru/ibet#ibet-redis)                   | Настройка Redis для передачи данных | Redis |
+| [**Kafka**](https://github.com/sazhiromru/ibet#ibet-kafka)                | Настройка Kafka через KRAFT для передачи данных в Clickhouse                       | Kafka        |
+| [**Clickhouse**](https://github.com/sazhiromru/ibet#ibet-clickhouse)                   | Запуск и настройка Clickhouse на сервере с 4 GB RAM | Clickhouse, SQL  |
+| [**Postgres**](https://github.com/sazhiromru/ibet#ibet-postgres)                   | Для записи данных и стабильной работы Airflow | Postgres  |
+| [**Airflow**](https://github.com/sazhiromru/ibet#ibet-airflow)                   | Автоматизация всех процессов, 8 DAG. | Airflow  |
+| [**GCP и BASH**](https://github.com/sazhiromru/ibet#ibet-bash)                   | Все сделано без контейнеров. Создание ключей, предоставление доступа, создание служб, логов, разрешения для программ, настройка среды, переменных и т д | BASH  |
+| [**Grafana**](https://github.com/sazhiromru/ibet#ibet-grafana)                | Создание ДБ с динамическими элементами                    | Grafana, SQL        |
 
 #### 📊 Ссылка на дашборд
 Обновляется в live с 06:00 до 16:00 CET:  
